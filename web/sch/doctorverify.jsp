@@ -4,6 +4,8 @@
     Author     : vedant
 --%>
 
+<%@page import="org.apache.pdfbox.pdmodel.interactive.form.*"%>
+<%@page import="org.apache.pdfbox.pdmodel.PDDocument"%>
 <%@page import="org.apache.commons.lang.RandomStringUtils"%>
 <%@page import="org.apache.commons.fileupload.FileItem"%>
 <%@page import="java.util.*"%>
@@ -17,9 +19,9 @@
 <%
      
      String url="jdbc:mysql://localhost:3306/doctor";
-            String uname="root";
-            String pass="root";
-            String msg="error";
+     String uname="root";
+     String pass="root";
+     String msg="error";
 //            
             InputStream inputStream = null;
           
@@ -137,6 +139,27 @@
                 else
                 {
                     msg="sucess";
+                    
+                    PDDocument pDDocument = PDDocument.load(new File("C:/Users/vedant/Desktop/doc1.pdf"));
+                    PDAcroForm pDAcroForm = pDDocument.getDocumentCatalog().getAcroForm();
+                    PDField field = pDAcroForm.getField("application");
+                    field.setValue(id+"");
+                    field = pDAcroForm.getField("name");
+                    field.setValue(fn+" "+ln);
+                    
+                    field = pDAcroForm.getField("email");
+                    field.setValue(email);
+                    
+                    field = pDAcroForm.getField("contact");
+                    field.setValue(email);
+                    
+                    field = pDAcroForm.getField("address");
+                    field.setValue(ad);
+                   
+                    
+                    pDDocument.save("C:/Users/vedant/Desktop/output.pdf");
+                    pDDocument.close();
+                    
                 }
       
 //                Configuration cond = new Configuration().configure().addAnnotatedClass(detail.class);
@@ -178,6 +201,9 @@
 //            out.println(distric);
 //            out.println(li);
 
+
+
+    
            
 %>
 <head>

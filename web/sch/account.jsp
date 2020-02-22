@@ -41,8 +41,9 @@
             district = rs.getString(10);
             tehsil = rs.getString(11);
             li = rs.getInt(12)+"";
+            
         }
-//        System.out.println(fname);
+        System.out.println(fname);
     }
     catch(Exception e)
     {
