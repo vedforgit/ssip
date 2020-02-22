@@ -14,9 +14,9 @@
     String address = request.getParameter("address");
     String district = request.getParameter("district");
     String taluka = request.getParameter("taluka");
-    int phone = Integer.parseInt(request.getParameter("phone"));
+    String phone = request.getParameter("phone");
     String email = request.getParameter("email");
-    int aadhar = Integer.parseInt(request.getParameter("aadhar"));
+    String aadhar = request.getParameter("aadhar");
     String temps = RandomStringUtils.randomAlphabetic(2);
      while(temps.length()!=2)
      {
@@ -45,9 +45,9 @@
          ps.setString(6,address);
          ps.setString(7,district);
          ps.setString(8,taluka);
-         ps.setInt(9,phone);
+         ps.setString(9,phone);
          ps.setString(10,email);
-         ps.setInt(11,aadhar);
+         ps.setString(11,aadhar);
          int x = ps.executeUpdate();
          if(x==0)
          {

@@ -42,7 +42,7 @@
          tempi =RandomStringUtils.randomNumeric(6).toString();
      }
      int id = Integer.parseInt(tempi);
-            int phone = 0;
+//            String phone = "";
             byte bd[] = null;                      
             out.println("start");
             try
@@ -83,7 +83,7 @@
                    }
                    if(item.getFieldName().equals("phone"))
                    {
-                       phone = Integer.parseInt(item.getString());
+                       Phone = item.getString();
                    }
                    if(item.getFieldName().equals("email"))
                    {
@@ -121,7 +121,7 @@
                 ps.setString(4,un);
                 ps.setString(5,pwd);
                 ps.setString(6,ge);
-                ps.setInt(7,phone);
+                ps.setString(7,Phone);
                 ps.setString(8,email);
                 ps.setString(9,ad);
                 ps.setString(10,distric);

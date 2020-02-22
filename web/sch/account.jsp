@@ -35,7 +35,7 @@
             fname = rs.getString(2);
             lname = rs.getString(3);
             gender = rs.getString(6);
-            number = rs.getInt(7)+"";
+            number = rs.getString(7);
             email = rs.getString(8);
             address = rs.getString(9);
             district = rs.getString(10);

@@ -68,7 +68,7 @@
          while(rs.next())
          {
              name = rs.getString(2)+"   "+rs.getString(3);
-             phone = rs.getInt(9)+"";
+             phone = rs.getString(9)+"";
              email = rs.getString(10);
              fname=rs.getString(2);
              lname=rs.getString(3);
