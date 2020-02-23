@@ -4,6 +4,7 @@
     Author     : vedant
 --%>
 
+<%@page import="org.apache.pdfbox.pdmodel.common.PDStream"%>
 <%@page import="org.apache.pdfbox.pdmodel.interactive.form.*"%>
 <%@page import="org.apache.pdfbox.pdmodel.PDDocument"%>
 <%@page import="org.apache.commons.lang.RandomStringUtils"%>
@@ -15,6 +16,7 @@
 <%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
 <%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
 <%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
+<%@page import="mail.SendEmail" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
      
@@ -151,14 +153,26 @@
                     field.setValue(email);
                     
                     field = pDAcroForm.getField("contact");
-                    field.setValue(email);
+                    field.setValue(Phone);
                     
                     field = pDAcroForm.getField("address");
                     field.setValue(ad);
                    
                     
-                    pDDocument.save("C:/Users/vedant/Desktop/output.pdf");
-                    pDDocument.close();
+                    File file = File.createTempFile(application+"",".pdf");
+//                    FileOutputStream fos = new FileOutputStream(file);
+                    
+                    pDDocument.save(file);
+                    
+                    SendEmail se = new SendEmail();
+                    boolean te=se.sendfile("medssip@gmail.com","medssip@123",email,"<h3>thanks for registration", file,"application.pdf");
+                    out.print(te);
+                   //PDStream pdStream = new PDStream(pDDocument);
+                    //byte[] data = pdStream.toByteArray();
+                    
+                    
+                    //pDDocument.save("C:/Users/vedant/Desktop/output.pdf");
+                    //pDDocument.close();
                     
                 }
       
