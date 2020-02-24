@@ -1,8 +1,10 @@
 <%-- 
     Document   : addpatient
-    Created on : 20 Jan, 2020, 5:23:40 PM
-    Author     : vedant
+    Created on : 20 Feb, 2020, 7:33:05 PM
+    Author     : Parthik Shah
 --%>
+
+<%@page import="ps.SendingEmail"%>
 <%@page import="java.sql.*"%>
 <%@page  import="org.apache.commons.lang.RandomStringUtils" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -55,7 +57,11 @@
          }
          else
          {
+              String send=("Your Name:"+firstname+""+lastname+" \n Your ID Number:"+id+"\n Your Mobile Number:"+phone+"\n");
              out.print("Success");
+             SendingEmail se = new SendingEmail();
+                    se.sendMail(email,"Your Details",send,"bisagasset@gmail.com","bisag__@@");
+                   response.sendRedirect("http://localhost:8084/WebApplication1/sch/dashboard.html");
          }
          
      }   
@@ -65,6 +71,4 @@
      }
      
 
-
-    
 %>

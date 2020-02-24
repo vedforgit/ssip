@@ -230,7 +230,7 @@
             alert("PLEASE NOTEDOWN:\n"+
                     "Your Application Number:"+<%=id%>+"\n"
                     +"Your USERNAME:<%=un%>");
-            window.location.href="http://localhost:8081/WebApplication1/sch/login.html";
+            window.location.href="http://localhost:8084/WebApplication1/sch/login.html";
         }
         else
         {
