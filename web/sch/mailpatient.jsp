@@ -7,6 +7,9 @@
 <!DOCTYPE html>
 
 <%
+    
+    
+    
         session = request.getSession();
         String doctorid=(String )session.getAttribute("username");
         String name = "";
