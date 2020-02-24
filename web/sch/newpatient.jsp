@@ -64,7 +64,7 @@
                                 if(y==true)
                                 {
                                     //alert("redirect");
-                                    window.location.href="http://localhost:8084/WebApplication1/sch/profile.jsp?patientid="+val;
+                                    window.location.href="http://localhost:8084/WebApplication1/sch/mailpatient.jsp?pid="+val;
                                 }
                                 if(y==false)
                                 {
@@ -180,8 +180,8 @@ John Abraham</span>is now following you
                                                 <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                 <a class="dropdown-item" href="account.jsp"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="logout.jsp"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -212,7 +212,7 @@ John Abraham</span>is now following you
                                     <ul class="nav flex-column">
                                         
                                         <li class="nav-item">
-                                            <a class="nav-link" href="addpatient.html">Register Patient</a>
+                                            <a class="nav-link" href="addpatient.jsp">Register Patient</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="newpatient.html">New Patient</a>

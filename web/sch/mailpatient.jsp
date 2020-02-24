@@ -1,7 +1,8 @@
 
+<%@page import="mail.SendEmail"%>
 <%--<%@page import="ps.SendingEmail.sendMail(String, String, String, String, String)"%>--%>
 <%@page import="java.sql.*"%>
-<%@page import="ps.SendingEmail"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -33,9 +34,10 @@
               email = rs.getString(1);
         }
         
-        SendingEmail se = new SendingEmail();
-        String send = "You visted Doctor:"+name+"\nAt:"+address+"\n\n\n\n\n\n\nIf Any Query Contact Us";
-        boolean x=se.sendMail(email,"Your Details",send,"bisagasset@gmail.com","bisag__@@");
+        SendEmail se=new SendEmail();
+        String send = "<h3>You visted Doctor:"+name+"<br><br>At:"+address+"<br><br></h3><h5>If Any Query Contact Us</h5>";
+        boolean x=se.sendfile("medssip@gmail.com","medssip@123",email,send);
+        
         
 //        window.location.href="http://localhost:8084/WebApplication1/sch/profile.jsp?patientid="+val;
         if(x==true)
