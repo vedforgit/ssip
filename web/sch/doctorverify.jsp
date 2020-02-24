@@ -17,6 +17,7 @@
 <%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
 <%@page import="org.apache.commons.fileupload.servlet.ServletFileUpload"%>
 <%@page import="mail.SendEmail" %>
+<%@page import="mail.sendSMS" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
      
@@ -167,7 +168,10 @@
                     SendEmail se = new SendEmail();
                     boolean te=se.sendfile("medssip@gmail.com","medssip@123",email,"<h3>thanks for registration", file,"application.pdf");
                     out.print(te);
-                   //PDStream pdStream = new PDStream(pDDocument);
+//                    sendSMS sms = new sendSMS();
+//                    String msgsent = sms.sendSms();
+//                    out.print(msgsent);
+//                   //PDStream pdStream = new PDStream(pDDocument);
                     //byte[] data = pdStream.toByteArray();
                     
                     
