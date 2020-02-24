@@ -142,7 +142,7 @@
                 {
                     msg="sucess";
                     
-                    PDDocument pDDocument = PDDocument.load(new File("C:/Users/vedant/Desktop/doc1.pdf"));
+                    PDDocument pDDocument = PDDocument.load(new File("D:/ssip/mailpdf/INPUT/doc1.pdf"));
                     PDAcroForm pDAcroForm = pDDocument.getDocumentCatalog().getAcroForm();
                     PDField field = pDAcroForm.getField("application");
                     field.setValue(id+"");

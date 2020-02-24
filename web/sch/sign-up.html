@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0081)file:///C:/Users/Riddhesh-pc/Desktop/vedant%20project/concept-master/sign-up.html -->
+
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -15,7 +16,7 @@
     html,
     body {
         height: 100%;
-    }
+        }
 
     body {
         display: -ms-flexbox;
@@ -89,7 +90,7 @@
                 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Login Detail *</label>
 <input class="form-control form-control-lg" type="text" name="un" required="" placeholder="Username" autocomplete="off">
-<input class="form-control form-control-lg" type="text" name="pwd" required="" placeholder="Password" autocomplete="off">
+<input class="form-control form-control-lg" type="password" name="pwd" required="" placeholder="Password" autocomplete="off">
 
                 </div>
                 <div class="form-group">
@@ -99,8 +100,9 @@
                 </div>
 <div class="form-group">
                     <label for="inputText3" class="col-form-label">Contact Details *</label>
-<input class="form-control form-control-lg" type="text" name="phone" required="" placeholder="Contact No" autocomplete="off">
+<input class="form-control form-control-lg" type="text" maxlength="10" pattern="[1-9]{1}[0-9]{9}" name="phone" required="" placeholder="Contact No" autocomplete="off">
 
+                
 <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
                 </div>
                 <div class="form-group">
@@ -131,12 +133,11 @@
                     <label for="inputText3" class="col-form-label">Upload degree</label>
 
    
-                                                <input type="file" name="degree" class="custom-file-input" id="customFile">
-                                                <label class="custom-file-label" for="customFile">Upload Degree</label>
+                    <input type="file" name="degree" required="" class="custom-file-input" id="customFile"><label class="custom-file-label" for="customFile">Upload Degree</label>
                                             </div>
                 <div class="form-group">
                     <label class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="file:///C:/Users/Riddhesh-pc/Desktop/vedant%20project/concept-master/sign-up.html#">terms and conditions</a></span>
+                        <input class="custom-control-input" required="" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="file:///C:/Users/Riddhesh-pc/Desktop/vedant%20project/concept-master/sign-up.html#">terms and conditions</a></span>
                     </label>
                 </div><div class="form-group pt-2">
                     <button class="btn btn-block btn-primary" type="submit">Submit</button>
