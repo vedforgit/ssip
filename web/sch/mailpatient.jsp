@@ -45,6 +45,6 @@
 //        window.location.href="http://localhost:8084/WebApplication1/sch/profile.jsp?patientid="+val;
         if(x==true)
         {
-            response.sendRedirect("http://localhost:8081/WebApplication1/sch/profile.jsp?patientid="+pid);
+            response.sendRedirect("http://localhost:8084/WebApplication1/sch/profile.jsp?patientid="+pid);
         }
  %>

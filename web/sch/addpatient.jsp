@@ -61,7 +61,7 @@
              out.print("Success");
              SendingEmail se = new SendingEmail();
                     se.sendMail(email,"Your Details",send,"bisagasset@gmail.com","bisag__@@");
-                   response.sendRedirect("http://localhost:8081/WebApplication1/sch/dashboard.html");
+                   response.sendRedirect("http://localhost:8084/WebApplication1/sch/dashboard.html");
          }
          
      }   
