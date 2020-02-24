@@ -25,7 +25,7 @@
                session  = request.getSession();
                session.setAttribute("username",uname);
 //               out.print("sucess");
-            response.sendRedirect("http://localhost:8084/WebApplication1/sch/dashboard.html");
+            response.sendRedirect("http://localhost:8081/WebApplication1/sch/dashboard.html");
            }
        }
     }

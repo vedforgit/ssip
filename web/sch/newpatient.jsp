@@ -68,7 +68,7 @@
                                 if(y==true)
                                 {
                                     //alert("redirect");
-                                    window.location.href="http://localhost:8084/WebApplication1/sch/mailpatient.jsp?pid="+val;
+                                    window.location.href="http://localhost:8081/WebApplication1/sch/mailpatient.jsp?pid="+val;
                                 }
                                 if(y==false)
                                 {
