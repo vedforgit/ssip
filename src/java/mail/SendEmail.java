@@ -123,7 +123,7 @@ public class SendEmail
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient)); 
       
             // Set Subject: subject of the email 
-            message.setSubject("Reciept of application"); 
+            message.setSubject("Message from medico"); 
               
             // creating first MimeBodyPart object 
             BodyPart messageBodyPart1 = new MimeBodyPart();  

@@ -27,7 +27,16 @@
 //               out.print("sucess");
             response.sendRedirect("http://localhost:8081/WebApplication1/sch/dashboard.html");
            }
+           
        }
+       if(role.equals("patient"))
+           {
+               session  = request.getSession();
+               session.setAttribute("username",uname);
+//               out.print("sucess");
+               String url ="http://localhost:8081/WebApplication1/sch/patientprofile.jsp?patientid="+uname ;     
+            response.sendRedirect(url);
+           }
     }
     catch(Exception e)
     {
