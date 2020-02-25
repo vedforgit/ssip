@@ -1,9 +1,3 @@
-<%-- 
-    Document   : verifylogin
-    Created on : 20 Jan, 2020, 7:55:21 PM
-    Author     : vedant
---%>
-
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +21,16 @@
 //               out.print("sucess");
             response.sendRedirect("http://localhost:8084/WebApplication1/sch/dashboard.html");
            }
+           
        }
+       if(role.equals("patient"))
+           {
+               session  = request.getSession();
+               session.setAttribute("username",uname);
+//               out.print("sucess");
+               String url ="http://localhost:8084/WebApplication1/sch/patientprofile.jsp?patientid="+uname ;     
+            response.sendRedirect(url);
+           }
     }
     catch(Exception e)
     {

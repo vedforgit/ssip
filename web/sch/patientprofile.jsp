@@ -48,7 +48,6 @@
               System.out.println(e);
               out.print("getvitalfunction error");
         }
-
 %>
 <%
 //    String pid = request.getParameter("patientid");
@@ -164,7 +163,6 @@
                         myload();
 //                    document.getElementById(col).innerHTML=req.responseText;
                 }
-
             };
         }
 </script>
@@ -1153,7 +1151,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                            Copyright Â© 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
