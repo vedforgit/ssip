@@ -1,18 +1,17 @@
 <%-- 
-    Document   : laboratory
-    Created on : 20 Feb, 2020, 6:08:25 PM
+    Document   : chemist
+    Created on : 26 Feb, 2020, 12:14:15 AM
     Author     : Parthik Shah
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!doctype html>
+
 <html lang="en">
  
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Medico</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -30,7 +29,7 @@
         <!-- ============================================================== -->
          <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <a class="navbar-brand" href="../index.html">Medico</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -149,7 +148,7 @@ John Abraham</h5>
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav flex-column">
@@ -443,13 +442,13 @@ John Abraham</h5>
 						
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Laboratry Section </h2>
+                            <h2 class="pageheader-title">PRESCRIPTION</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Laboratry</a></li>
+                                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Prescription</a></li>
                                         <!-- <li class="breadcrumb-item active" aria-current="page">General Tables</li> -->
                                     </ol>
                                 </nav>
@@ -458,69 +457,105 @@ John Abraham</h5>
                     </div>
                 
                             <div class="card">
-                                <h5 class="card-header">Laboratry Reports</h5>
+                                <h5 class="card-header">
+                                    Date <input type="date">
+                                </h5>
+                                <h5 class="card-header">
+                                    Patient Id            <input placeholder="Patinet Id">
+                                </hr>
+                                <h5 class="card-header">
+                                    Name of Doctor             <input placeholder="Name of Doctor">
+                                </h5>
                                 <div class="card-body">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Dieases</th>
-                                                <th scope="col">Reports</th>
-                                                <th scope="col">Upload</th>
+                                                <th scope="col">Drug</th>
+                                                <th scope="col">Quantity</th>
+                                                <th scope="col">Instructions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>Mark</td>
                                                 <td>
 													<form>
 														<select name = "Search">
-															<option value = "Blood" selected>Blood</option>
-															<option value = "Urine">Urine</option>
+															<option value = "Fever" selected>Fever</option>
+															<option value = "Cold">Cold</option>
 															<option value = "Diabeates">Diabeates</option>
 														</select>
 													</form>
-												</td>
+                                                </td>
+                                                <td>
+                                                    <form>
+														<select name = "Search">
+															<option value = "Crocin" selected>Crocin</option>
+															<option value = "Metacin">Metacin</option>
+															<option value = "Paracetamol">Paracetamol</option>
+														</select>
+													</form>
+                                                </td>
+                                                <td><input></td>
                                                 <td> 
 													<form>
-														<input type="file" name="name" multiple><br><br>
+														<input  name="name"><br><br>
 													</form>
 												</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
-                                                <td>Jacob</td>
                                                 <td>
 													<form>
 														<select name = "Search">
-															<option value = "Blood" selected>Blood</option>
-															<option value = "Urine">Urine</option>
+															<option value = "Fever" selected>Fever</option>
+															<option value = "Cold">Cold</option>
 															<option value = "Diabeates">Diabeates</option>
 														</select>
 													</form>
-												</td>
+                                                </td>
                                                 <td>
+                                                    <form>
+														<select name = "Search">
+															<option value = "Crocin" selected>Crocin</option>
+															<option value = "Metacin">Metacin</option>
+															<option value = "Paracetamol">Paracetamol</option>
+														</select>
+													</form>
+                                                </td>
+                                                <td><input></td>
+                                                <td> 
 													<form>
-														<input type="file" name="name" multiple><br><br>
+														<input  name="name"><br><br>
 													</form>
 												</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">3</th>
-                                                <td>Larry</td>
                                                 <td>
 													<form>
 														<select name = "Search">
-															<option value = "Blood" selected>Blood</option>
-															<option value = "Urine">Urine</option>
+															<option value = "Fever" selected>Fever</option>
+															<option value = "Cold">Cold</option>
 															<option value = "Diabeates">Diabeates</option>
 														</select>
 													</form>
-												</td>
+                                                </td>
                                                 <td>
+                                                    <form>
+														<select name = "Search">
+															<option value = "Crocin" selected>Crocin</option>
+															<option value = "Metacin">Metacin</option>
+															<option value = "Paracetamol">Paracetamol</option>
+														</select>
+													</form>
+                                                </td>
+                                                <td><input></td>
+                                                <td> 
 													<form>
-														<input type="file" name="name" multiple><br><br>
+														<input  name="name"><br><br>
 													</form>
 												</td>
                                             </tr>
@@ -539,11 +574,11 @@ John Abraham</h5>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <div class="footer">
+<!--            <div class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            Copyright Â© 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
+                            Copyright © 2018 Concept. All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">Colorlib</a>.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
@@ -554,7 +589,7 @@ John Abraham</h5>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->

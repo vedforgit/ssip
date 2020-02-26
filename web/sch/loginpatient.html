@@ -54,9 +54,11 @@ and open the template in the editor.
             }
             if(temp==true)
             {
+                var role="patient";
                 pwd = document.getElementById('password').value;
-                window.location.href="http://localhost:8084/WebApplication1/sch/verifylogin.jsp?uname="+username+"&pwd="+pwd+"&role="+"patient";
-            }
+                window.location.href="http://localhost:8084/WebApplication1/sch/verifylogin.jsp?uname="+username+"&pwd="+pwd+"&role="+role;    
+               // window.location.href = "http://localhost:8084/WebApplication1/sch/patientprofile.jsp?uname="+username;
+        }
         }
     </script>
 </head>
@@ -78,7 +80,7 @@ and open the template in the editor.
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="pwd" id="password" type="password" placeholder="OTP">
                     </div>
-                    
+                     <input type="radio" id="gender" name="role" value="patient" checked="" class="custom-control-input">
 <!--
                                   <div class="form-group">
                     <label for="inputText3" class="col-form-label">Role *</label>

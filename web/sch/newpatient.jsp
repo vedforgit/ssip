@@ -132,7 +132,7 @@
                 
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        
+<!--                        
                         <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
@@ -180,7 +180,7 @@ John Abraham</span>is now following you
                                     <div class="list-footer"> <a href="#">View all notifications</a></div>
                                 </li>
                             </ul>
-                        </li>
+                        </li>-->
                                                 <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
@@ -216,10 +216,10 @@ John Abraham</span>is now following you
                                     <ul class="nav flex-column">
                                         
                                         <li class="nav-item">
-                                            <a class="nav-link" href="addpatient.jsp">Register Patient</a>
+                                            <a class="nav-link" href="addpatient.html">Register Patient</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="newpatient.html">New Patient</a>
+                                     <a class="nav-link" href="newpatient.html">New Patient</a>
                                         </li>
                                         
                                     </ul>
@@ -245,7 +245,7 @@ John Abraham</span>is now following you
                                 </div>
                             </li>
 							
-							
+<!--							
 							<li class="nav-item">
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>Information</a>
                                 <div id="submenu-2" class="submenu collapse" style="">
@@ -261,8 +261,8 @@ John Abraham</span>is now following you
                                     </ul>
                                 </div>
                             </li>
-							
-							
+							-->
+<!--							
 							<li class="nav-item">
                                 <a class="nav-link" href="dashboard.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Dashboard</a>
                                 <div id="submenu-3" class="collapse submenu" style="">
@@ -288,7 +288,7 @@ John Abraham</span>is now following you
                                     </ul>
                                 </div>
                             </li>
-							
+							-->
                             
                            
                 </nav>
@@ -356,7 +356,7 @@ John Abraham</span>is now following you
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
-            <!-- ============================================================== -->
+<!--             ============================================================== 
             <div class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -372,7 +372,7 @@ John Abraham</span>is now following you
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->

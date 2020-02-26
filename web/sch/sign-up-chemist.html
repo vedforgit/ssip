@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Medico</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+    html,
+    body {
+        height: 100%;
+        }
+
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    </style>
+    <script>
+        
+         function myload()
+            {
+                xyz();
+                alert();
+            }
+            function xyz() // taluka   option
+            {
+                var dis=""
+                var req=new XMLHttpRequest();
+                req.open("get","fetch_distric.jsp?",true);
+                req.send();
+                req.onreadystatechange=function(){
+                    if(req.readyState==4 && req.status==200)
+                    {
+                        dis="<select name='district' id='district' onchange='abc()'><option>select district</option>"+req.responseText+"</select>";
+                    }
+                    $("#dis").append(dis);
+                };
+            }
+            
+            function abc() //tehsil option
+            {
+                alert(document.getElementById('district').value);
+                $("#dis1").empty();
+                var dis=""
+                var req=new XMLHttpRequest();
+                req.open("get","fetch_taluka.jsp?district="+document.getElementById('district').value,true);
+                req.send();
+                req.onreadystatechange=function(){
+                    if(req.readyState==4 && req.status==200)
+                    {
+                        dis="<select name='taluka' id='taluka' >"+req.responseText+"</select>";
+                    }
+                    $("#dis1").append(dis);
+                };
+            }
+        </script>
+         <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="assets/libs/js/main-js.js"></script>
+    
+</head>
+<!-- ============================================================== -->
+<!-- signup form  -->
+<!-- ============================================================== -->
+
+<body onload="myload()">
+    <!-- ============================================================== -->
+    <!-- signup form  -->
+    <!-- ============================================================== -->
+    <form class="splash-container" action="chemistverify.jsp" method="post" enctype = "multipart/form-data">
+        <div class="card">
+            <div class="card-header">
+                <h4 align="center" class="mb-1">Chemist Registrations Form</h4>
+                <p align="center">Fill out the form carefully for registration</p>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="inputText3" class="col-form-label">Login Detail *</label>
+<input class="form-control form-control-lg" type="text" name="un" required="" placeholder="Username" autocomplete="off">
+<input class="form-control form-control-lg" type="password" name="pwd" required="" placeholder="Password" autocomplete="off">
+
+                </div>
+                <div class="form-group">
+    <label for="inputText3" class="col-form-label">Name *</label>
+                   <input class="form-control form-control-lg" type="text" name="fn" required="" placeholder="First Name" autocomplete="off">
+    <input class="form-control form-control-lg" type="text" name="ln" required="" placeholder="Last Name" autocomplete="off">
+                </div>
+<div class="form-group">
+                    <label for="inputText3" class="col-form-label">Contact Details *</label>
+<input class="form-control form-control-lg" type="text" maxlength="10" pattern="[1-9]{1}[0-9]{9}" name="phone" required="" placeholder="Contact No" autocomplete="off">
+
+                
+<input class="form-control form-control-lg" type="email" name="email" required="" placeholder="E-mail" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="inputText3" class="col-form-label">Gender *</label>
+<label class="custom-control custom-radio custom-control-inline">
+    <input type="radio" id="gender" name="gender" value="male" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
+                                            </label>
+
+<label class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="gender" name="gender" value="male" class="custom-control-input"><span class="custom-control-label">Female</span>
+                                            </label> 
+                </div>
+                <div class="form-group">
+                    <label for="inputText3" class="col-form-label">Laboratory Address</label>
+                    <input class="form-control form-control-lg" type="text" name="address" required="" placeholder="Street Address" autocomplete="off">
+                    <label for="inputText3" class="col-form-label">Select District</label>
+                    <span id="dis" ></span>
+&nbsp; &nbsp; &nbsp;
+                    <label for="inputText3" class="col-form-label">Select Tehsil</label>
+                    <span id="dis1"></span>
+
+
+                </div>
+<div class="form-group">
+                    <label for="inputText3" class="col-form-label">Licence Number</label><input class="form-control form-control-lg" type="text" name="li" required="" placeholder="Only Number Allowed" autocomplete="off"></div>
+
+ <div class="custom-file mb-3">
+                    <label for="inputText3" class="col-form-label">Upload degree</label>
+
+   
+                    <input type="file" name="degree" required="" class="custom-file-input" id="customFile"><label class="custom-file-label" for="customFile">Upload Degree</label>
+                                            </div>
+                <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" required="" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="file:///C:/Users/Riddhesh-pc/Desktop/vedant%20project/concept-master/sign-up.html#">terms and conditions</a></span>
+                    </label>
+                </div><div class="form-group pt-2">
+                    <button class="btn btn-block btn-primary" type="submit">Submit</button>
+    <button class="btn btn-block btn-primary" type="reset">Reset</button>
+                </div>
+                
+                <!--<div class="form-group row pt-0">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2">
+                        <button class="btn btn-block btn-social btn-facebook " type="button">Facebook</button>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <button class="btn  btn-block btn-social btn-twitter" type="button">Twitter</button>
+                    </div>
+                </div>-->
+            </div>
+            <div class="card-footer bg-white">
+                
+            </div>
+        </div>
+    </form>
+
+
+ 
+</body></html>

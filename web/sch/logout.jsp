@@ -11,5 +11,5 @@
     response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
     session.invalidate();
     session=request.getSession();
-    response.sendRedirect("http://localhost:8084/WebApplication1/sch/login.html");
+    response.sendRedirect("http://localhost:8084/WebApplication1/sch/index.html");
 %>
