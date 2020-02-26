@@ -1,10 +1,5 @@
-<%-- 
-    Document   : patientprofile
-    Created on : 25 Feb, 2020, 7:29:09 AM
-    Author     : vedant
---%>
-
 <%@page import="java.sql.*"%>
+<%@page import="upimg.uploadImage"%>
 <!doctype html>
 <html lang="en">
 
@@ -48,7 +43,6 @@
               System.out.println(e);
               out.print("getvitalfunction error");
         }
-
 %>
 <%
 //    String pid = request.getParameter("patientid");
@@ -101,6 +95,10 @@
 //        console.log(c);
         var url = "";
         var pid = "";
+        function upimage()
+        {
+            window.location.href="upoadImage"
+        }
         function myload()
         {
             url = window.location.href;
@@ -164,12 +162,12 @@
                         myload();
 //                    document.getElementById(col).innerHTML=req.responseText;
                 }
-
             };
         }
 </script>
 </head>
 <body onload="myload()">
+    <form action="uploadImage" method="post" enctype="multipart/form-data">
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -200,10 +198,10 @@
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
                                                     <div class="notification-list-user-img">
-                                                        <img src="assets/images/avatar.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <input type="file" name="file123">paarthik
+                                                        <img src="assets/images/blankdp.png" alt="" class="user-avatar-md rounded-circle"></div>
+<!--                                                    <input type="file" name="file123">paarthik
                                                     <input type="submit" value="upload Image">
-                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.-->
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
                                                 </div>
@@ -621,12 +619,19 @@
                             <div class="card" align="left">
                                 <div class="card-body">
                                     <div class="user-avatar text-center d-block">
-                                        <img src="assets/images/blankdp.png" alt="User Avatar" height="150" width="150">
+                                      
+                                        <% String patientid=request.getParameter("pid"); %>
+                                          <img src="getImage.jsp?patientid=<%=patientid%>" alt="User Avatar" height="150" width="150">
                                     </div>
                                     <br>
                                     <div class="card">
+                                        <!--<input type="hidden" name="pid">-->
+                                      <!--String username=request.getParameter("pid"); %>-->
+                                        <!--<img src="getImage.jsp?pid==pid%>" height="150" width="150">-->
+                                        
                                          <input type="file" name="file123" ><br /><p></p>
-                                        <input type="submit" value="Upload Image">
+                                        <!--<input type="submit" value="Upload Image">-->
+                                        <button onclick="upimage()">Upload Image</button>
                                     </div>
                                     
                                     <br>
@@ -1146,6 +1151,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- ============================================================== -->
             <!-- end content -->
             <!-- ============================================================== -->
@@ -1185,7 +1191,7 @@
     <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <!-- main js -->
     <script src="assets/libs/js/main-js.js"></script>
-   
+     
 </body>
- 
+  
 </html>

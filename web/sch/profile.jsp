@@ -93,6 +93,9 @@
 //        console.log(c);
         var url = "";
         var pid = "";
+        var symnum = 1;
+        
+        
         function myload()
         {
             url = window.location.href;
@@ -159,9 +162,67 @@
 
             };
         }
+        function fetchsymptom()
+        {
+            var req=new XMLHttpRequest();
+            req.open("get","fetchsymptoms.jsp",true);
+            req.send();
+            req.onreadystatechange=function()
+            {
+                if(req.readyState==4 && req.status==200)
+                {
+//                        alert(req.responseText);
+//                        myload();
+//                    document.getElementById(col).innerHTML=req.responseText;
+                       var b="<select name='symptom"+symnum+"' id='symptom"+symnum+"'>"+req.responseText+"</select ><span name='symmsg"+symnum+"' id='symmsg"+symnum+"'></span><br>"
+                       $('#addsymptoms').append(b);
+                }
+
+            };
+        }
+        function addsymp()
+        {
+            
+//            alert(document.getElementById('symptom'+symnum).value);
+            if(document.getElementById('symptom'+symnum).value=="")
+            {
+//                alert();
+                document.getElementById('symmsg'+symnum).innerHTML="please select this then add more";
+                return false;
+            }
+//            var a = document.getElementById('addsymptoms');
+//            symnum += 1;
+//            var b = "<input type='text' required='' class='form-control' name='symptom"+symnum+"' id='symptom"+symnum+"'><br/>"
+//            var b="<select name='symptom"+symnum+"' id='symptom"+symnum+"'></select ><span name='symmsg"+symnum+"' id='symmsg"+symnum+"'></span><br>"
+//            $('#addsymptoms').append(b);
+//            a.appendChild(b);
+            else
+            {
+                symnum += 1;
+                fetchsymptom();
+            }
+        }
+        function fetchdisease()
+        {
+            var req=new XMLHttpRequest();
+            req.open("get","fetchdisease.jsp",true);
+            req.send();
+            req.onreadystatechange=function()
+            {
+                if(req.readyState==4 && req.status==200)
+                {
+//                        alert(req.responseText);
+//                        myload();
+//                    document.getElementById(col).innerHTML=req.responseText;
+                       var b="<select name='disease' id='disease'>"+req.responseText+"</select ><br>"
+                       $('#adddisease').append(b);
+                }
+
+            };
+        }
 </script>
 </head>
-<body onload="myload()">
+<body onload="myload();fetchsymptom();fetchdisease();">
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -862,34 +923,34 @@
 												
 														<div class="form-group row">
 														<label class="col-12 col-sm-3 col-form-label text-sm-right">Symptoms</label>
-														<div class="col-12 col-sm-8 col-lg-6">
-															<input type="text" required="" class="form-control" name="symptoms">
+														<div class="col-12 col-sm-8 col-lg-6" id="addsymptoms" class="addsymptoms">
+                                                                                                                    <!--<input type="text" required="" class="form-control" name="symptom1" id="symptom1"><span id="symmsg1"></span><br/>-->                                                                                      
+                                                                                                                        <!--<ad ></ad>-->
 														</div>
+                                                                                                                
 														</div>
-														
+													
 														<div class="form-group row">
 														<label class="col-12 col-sm-3 col-form-label text-sm-right">Disease</label>
-														<div class="col-12 col-sm-8 col-lg-6">
-															<input type="text" required="" class="form-control" name="disease">
+														<div class="col-12 col-sm-8 col-lg-6" id="adddisease" class="adddisease">
+															<!--<input type="text" required="" class="form-control" name="disease">-->
 														</div>
 														</div>
 														
 														<div class="form-group row">
 														
-														<label class="col-12 col-sm-3 col-form-label text-sm-right">Condition</label>
+														<label class="col-12 col-sm-3 col-form-label text-sm-right">Discription</label>
 														<div class="col-12 col-sm-8 col-lg-6">
-																<select class="form-control" id="input-select" name="condition">
-																	<option value="ok">ok</option>
-																	<option value="repeat">repeat</option>
-																	<option value="notwell">notwell</option>
-																</select>
+                                                                                                                    <input type="text" id="discription" name="discription">	
 														</div>
 														</div>
 														
 
 														
 														<div align="center">
-															<button class="btn btn-primary active">Add</button>
+                                                                                                                    <input type="button" class="btn btn-primary active" value="more symptoms" onclick="addsymp()">
+															<!--<button class="btn btn-primary active">Add</button>-->
+                                                                                                                       
 												        </div>
 												         
 											</div>

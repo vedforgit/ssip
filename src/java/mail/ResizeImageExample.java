@@ -27,10 +27,21 @@ public class ResizeImageExample {
 
         File output = new File("C:/Users/vedant/Desktop/CPS_0006.jpg");
         ImageIO.write(resized, "png", output);
-
+        
     }
 
-    private static BufferedImage resize(BufferedImage img) {
+    public static BufferedImage resize(BufferedImage img, int par, int par1) 
+    {
+        Image tmp = img.getScaledInstance(215,215, Image.SCALE_SMOOTH);
+        BufferedImage resized = new BufferedImage(215,215, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2d = resized.createGraphics();
+        g2d.drawImage(tmp, 0, 0, null);
+        g2d.dispose();
+        return resized;
+    }
+    
+    public static BufferedImage resize(File f,BufferedImage img, int par, int par1) 
+    {
         Image tmp = img.getScaledInstance(215,215, Image.SCALE_SMOOTH);
         BufferedImage resized = new BufferedImage(215,215, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2d = resized.createGraphics();
