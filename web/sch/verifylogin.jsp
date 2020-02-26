@@ -63,20 +63,20 @@
           
        }
     }
-//      else
-//       {
-//            // if(role.equals("patient"))
-//           {
-//               System.out.println("verify login patient");
-//               session  = request.getSession();
-//               session.setAttribute("username",uname);
-////               out.print("sucess");
-//               //String url =;     http://localhost:8084/WebApplication1/sch/patientprofile.jsp?patientid=EY46850
-//                response.sendRedirect("http://localhost:8084/WebApplication1/sch/patientprofile.jsp?patientid="+uname);
-//            
-//               
-//           }
-//       }
+      else
+       {
+            // if(role.equals("patient"))
+           {
+               System.out.println("verify login patient");
+               session  = request.getSession();
+               session.setAttribute("username",uname);
+//               out.print("sucess");
+               //String url =;     http://localhost:8084/WebApplication1/sch/patientprofile.jsp?patientid=EY46850
+                response.sendRedirect("http://localhost:8084/WebApplication1/sch/patientprofile.jsp?patientid="+uname);
+            
+               
+           }
+       }
        }
     catch(Exception e)
     {

@@ -30,18 +30,18 @@
         <!-- ============================================================== -->
          <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="../index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">Medico</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
+<!--                        <li class="nav-item">
                             <div id="custom-search" class="top-search-bar">
                                 <input class="form-control" type="text" placeholder="Search..">
                             </div>
-                        </li>
-                        <li class="nav-item dropdown notification">
+                        </li>-->
+<!--                        <li class="nav-item dropdown notification">
                             <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                             <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                                 <li>
@@ -50,7 +50,7 @@
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -58,7 +58,7 @@
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">
 John Abraham</span>is now following you
                                                         <div class="notification-date">2 days ago</div>
@@ -67,7 +67,7 @@ John Abraham</span>is now following you
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -84,8 +84,8 @@ John Abraham</span>is now following you
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                <li>-->
+<!--                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
                                 </li>
                             </ul>
                         </li>
@@ -120,10 +120,10 @@ John Abraham</span>is now following you
                                     <div class="conntection-footer"><a href="#">More</a></div>
                                 </li>
                             </ul>
-                        </li>
+                        </li>-->
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="dropdown-item" href="logout.jsp"><i class="fas fa-power-off mr-2"></i>Logout</a>
+<!--                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">
 John Abraham</h5>
@@ -132,19 +132,19 @@ John Abraham</h5>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
-                            </div>
+                            </div>-->
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
-        <!-- ============================================================== -->
-        <!-- end navbar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- left sidebar -->
-        <!-- ============================================================== -->
-      <div class="nav-left-sidebar sidebar-dark">
+<!--         ============================================================== 
+         end navbar 
+         ============================================================== 
+         ============================================================== 
+         left sidebar 
+         ============================================================== -->
+<!--      <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
@@ -429,17 +429,17 @@ John Abraham</h5>
                 </nav>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- end left sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
+         ============================================================== 
+         end left sidebar 
+         ============================================================== 
+         ============================================================== 
+         wrapper  
+         ============================================================== 
         <div class="dashboard-wrapper">
             <div class="container-fluid dashboard-content">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <!-- <h3 class="text-center">Content goes here!</h3> -->
+                         <h3 class="text-center">Content goes here!</h3> 
 						
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
@@ -450,15 +450,15 @@ John Abraham</h5>
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Home</a></li>
                                         <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Laboratry</a></li>
-                                        <!-- <li class="breadcrumb-item active" aria-current="page">General Tables</li> -->
+                                         <li class="breadcrumb-item active" aria-current="page">General Tables</li> 
                                     </ol>
                                 </nav>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 
                             <div class="card">
-                                <h5 class="card-header">Laboratory Reports</h5>
+                                <h1 align="center" class="card-header">Laboratory Reports</h1>
                                 <div class="card-body">
                                     <table class="table">
                                         <thead>
@@ -539,7 +539,7 @@ John Abraham</h5>
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <div class="footer">
+<!--            <div class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -554,7 +554,7 @@ John Abraham</h5>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
