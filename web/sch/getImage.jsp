@@ -75,14 +75,14 @@
                     System.out.println("getImgpage-start"); 
                     PDDocument pDDocument = PDDocument.load(new File("C:/dependency/healthcard.pdf"));
                     PDAcroForm pDAcroForm = pDDocument.getDocumentCatalog().getAcroForm();
-                    PDImageXObject imgx = PDImageXObject.createFromByteArray(pDDocument, byteArray,".jpg");
-                    PDPage paged = pDDocument.getPage(0);
-                    PDPageContentStream contents = new PDPageContentStream(pDDocument,paged);
-                    contents.drawImage(imgx,165,250);
-                    
+//                    PDImageXObject imgx = PDImageXObject.createFromByteArray(pDDocument, byteArray,".jpg");
+//                    PDPage paged = pDDocument.getPage(0);
+//                    PDPageContentStream contents = new PDPageContentStream(pDDocument,paged);
+//                    contents.drawImage(imgx,165,250);
+//                    pDDocument.getDocument().;
                     PDField field = pDAcroForm.getField("name");
                     field.setValue(name);
-                
+                   
                     field = pDAcroForm.getField("dob");
                     field.setValue(dob);
                 
