@@ -14,17 +14,17 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
  
 public class sendSMS {
-	public String sendSms() {
+	public String sendSms(String num,String msg) {
 		try {
 			// Construct data
-			String apiKey = "apikey=" + "Pv0oV9VEVX8-HqSXL3BHF8FgFMM1qdptST8MOrRDfR";
-			String message = "&message=" + "This is your message by shubham";
-			String sender = "&sender=" + "medssip";
-			String numbers = "&numbers=" + "919054504099";
+			String apiKey = "apikey=" + "Pv0oV9VEVX8-49ZQ4AHO3q2koLHKzoi2ODn9Eaz2wb";
+			String message = "&message=" + msg;
+//			String sender = "&sender=" + "jay";
+			String numbers = "&numbers=" + num;
 			
 			// Send data
 			HttpURLConnection conn = (HttpURLConnection) new URL("https://api.textlocal.in/send/?").openConnection();
-			String data = apiKey + numbers + message + sender;
+			String data = apiKey + numbers + message ;
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Length", Integer.toString(data.length()));
@@ -43,8 +43,5 @@ public class sendSMS {
 			return "Error "+e;
 		}
 	}
-        public static void main(String[] args) {
-            sendSMS s = new sendSMS();
-            System.out.println(s.sendSms());
-    }
+        
 }

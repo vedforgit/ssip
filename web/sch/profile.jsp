@@ -94,7 +94,7 @@
         var url = "";
         var pid = "";
         var symnum = 1;
-        
+        var drugnum = 0;
         
         function myload()
         {
@@ -204,6 +204,7 @@
         }
         function fetchdisease()
         {
+            
             var req=new XMLHttpRequest();
             req.open("get","fetchdisease.jsp",true);
             req.send();
@@ -217,12 +218,46 @@
                        var b="<select name='disease' id='disease'>"+req.responseText+"</select ><br>"
                        $('#adddisease').append(b);
                 }
+            };
+            
+            
+            
+        }
+        function adddrug()
+        {
+            if(drugnum>=1)
+            {
+                if(document.getElementById('quantity'+drugnum).value=="")
+                {
+                    return false;
+                }
+            }
+            var req=new XMLHttpRequest();
+            req.open("get","fetchdrug.jsp",true);
+            req.send();
+            req.onreadystatechange=function()
+            {
+                if(req.readyState==4 && req.status==200)
+                {
+                       drugnum += 1;
+                       var num ="<tr><th>"+drugnum+"</th>" ;
+                       
+                       var drug="<th><select name='drug"+drugnum+"' id='drug"+drugnum+"'>"+req.responseText+"</slect ></th>"
+                       
+                       var quantity = "<th><input type='text' name='quantity"+drugnum+"' id='quantity"+drugnum+"'></th>";
+                       
+                       var schedual = "<th><select name='schedual"+drugnum+"' id='schedual"+drugnum+"'><option value='0-0-1'>0-0-1</option><option value='0-1-0'>0-1-0</option><option value='1-0-0'>1-0-0</option><option value='0-1-1'>0-1-1</option><option value='1-1-0'>1-1-0</option><option value='1-0-1'>1-0-1</option><option value='1-1-1'>1-1-1</option></select></th></tr>"
+                       
+                       var b = num + drug + quantity + schedual;
+                       $('#adddrug').append(b);
+                }
 
             };
         }
+        
 </script>
 </head>
-<body onload="myload();fetchsymptom();fetchdisease();">
+<body onload="myload();fetchsymptom();fetchdisease();adddrug();">
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -976,26 +1011,28 @@
                                                 <th scope="col">Drug</th>
                                                 <th scope="col">Quantity</th>
                                                 <th scope="col">Duration</th>
-                                                <th scope="col">#</th>
+                                                <!--<th scope="col">Days</th>-->
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td><input type="text" name="drug1"></td>
+                                        <tbody id="adddrug" class="adddrug">
+                                            
+                                                <!--<th scope="row">1</th>-->
+<!--                                                <th>1<th/>
+                                                <th><select name='drug1' id='drug1'>"+req.responseText+"</slect ><th>-->
+<!--                                                <td><input type="text" name="drug1"></td>
                                                 <td><input type="text" name="quantity1" size="4"></td>
                                                 <td><input type="text" name="duration" size="4"></td>
                                                 <td>
 												<button>Add</button>
-												</td>
-                                            </tr>
+												</td>-->
+                                            
 											
                                          </tbody>
                                     </table>
 								    
 											 <div align="center">
-															<button class="btn btn-primary active">Preview</button>
-															<button class="btn btn-primary active">Ok</button>
+                                                                                             <button class="btn btn-primary active" onclick="adddrug()">Add Drug</button>
+															<button class="btn btn-primary active">Go</button>
 												</div>
 											 
 											 
